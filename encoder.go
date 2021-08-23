@@ -55,6 +55,10 @@ func NewWriter(output io.Writer) (*Writer, error) {
 	}, nil
 }
 
+func (w *Writer) SetBrate(brate int) {
+	w.lame.SetBrate(brate)
+}
+
 // forced to init the params inside
 // NOT NECESSARY
 func (w *Writer) ForceUpdateParams() (err error) {

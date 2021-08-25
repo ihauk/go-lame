@@ -59,6 +59,10 @@ func (w *Writer) SetBrate(brate int) {
 	w.lame.SetBrate(brate)
 }
 
+func (w *Writer) GetBrate() int {
+	return w.lame.GetBrate()
+}
+
 // forced to init the params inside
 // NOT NECESSARY
 func (w *Writer) ForceUpdateParams() (err error) {

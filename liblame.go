@@ -86,7 +86,6 @@ func NewLame() (l *Lame, err error) {
 		return nil, ErrInsufficientMemory
 	}
 	
-	C.lame_set_padding_type(l.lgs, C.int(0))
 	runtime.SetFinalizer(l, finalizer)
 	return l, nil
 
